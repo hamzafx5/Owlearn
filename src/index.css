@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* * {
+        @apply bg-blue-500/10 outline-dashed outline-1 outline-gray-400;
+    } */
+    ::selection,
+    mark {
+        @apply bg-primary text-white;
+    }
+    html,
+    body {
+        scroll-behavior: smooth;
+        font-size: 100%;
+        /* max-width: 100vw;
+        min-height: 100vh;
+        overflow-x: hidden; */
+    }
+    body {
+        @apply text-base font-normal leading-[1.5em] text-main;
+    }
+}
+
+@layer components {
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5 {
+        @apply font-bold mb-[0.6em] text-main;
+    }
+
+    h1,
+    .h1 {
+        @apply text-4xl md:text-5xl leading-[1.2em];
+    }
+    h2,
+    .h2 {
+        @apply text-3xl md:text-4xl leading-[1.2em];
+    }
+    h3,
+    .h3 {
+        @apply text-2xl md:text-3xl leading-[1.2em];
+    }
+    h4,
+    .h4 {
+        @apply text-xl md:text-2xl leading-[1.2em];
+    }
+    h4,
+    .h4 {
+        @apply text-lg md:text-xl leading-[1.2em];
+    }
+
+    /* Burger Menu */
+    .burger-menu {
+        @apply w-7 h-7 relative;
+    }
+    .burger-menu > div {
+        @apply w-full bg-black h-[3px] rounded-sm absolute transition-all duration-300;
+    }
+    .burger-menu div:first-child {
+        @apply top-1;
+    }
+    .burger-menu div:nth-child(2) {
+        @apply top-[calc(50%-1px)];
+    }
+    .burger-menu div:nth-child(3) {
+        @apply bottom-1;
+    }
+
+    .burger-menu.open div:first-child {
+        @apply rotate-45 top-[calc(0.875rem_-_1.5px)];
+    }
+    .burger-menu.open div:nth-child(2) {
+        @apply opacity-0;
+    }
+    .burger-menu.open div:last-child {
+        @apply rotate-[-45deg] bottom-[calc(0.875rem_-_1.5px)];
+    }
+
+    .switch-btn {
+        @apply inline-block w-[50px] h-[28px] relative;
+    }
+
+    .switch-btn span {
+        @apply block w-full h-full bg-slate-200 rounded-[14px];
+    }
+
+    .switch-btn input:checked + span {
+        @apply bg-primary;
+    }
+    .switch-btn input:checked + span::after {
+        @apply translate-x-[22px];
+    }
+
+    .switch-btn span::after {
+        @apply content-[""] transition-all duration-300 z-10 absolute top-[2px] left-[2px] w-[24px] h-[24px]
+		rounded-full bg-white;
+    }
+
+    .switch-btn input {
+        @apply hidden;
+    }
+}
+
+@layer utilities {
+    .sudo {
+        content: "";
+        position: absolute;
+    }
+    .clickable {
+        @apply cursor-default md:cursor-pointer;
+    }
+    .link-clr {
+        @apply text-[#086BED];
+    }
+
+    .overly-layer {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* width: 100%; */
+        /* height: 100%; */
+        z-index: 1;
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 70%,
+            rgba(255, 255, 255, 1) 100%
+        );
+    }
+}
