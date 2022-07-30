@@ -38,7 +38,7 @@ export default function Graduated() {
             <h3 className="text-center py-16">Our graduates have worked in</h3>
             <div className="grid grid-cols-2 md:grid-cols-3  lg:grid-cols-5 gap-y-10 gap-x-10 lg:gap-x-24 items-center">
                 {brands.map((brand, index) => (
-                    <img key={index} src={brand} alt="brand" />
+                    <img loading="lazy" key={index} src={brand} alt="brand" />
                 ))}
             </div>
         </section>

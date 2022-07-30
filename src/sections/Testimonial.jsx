@@ -7,6 +7,7 @@ export default function Testimonial() {
             <div className="w-full">
                 <img
                     src={testimonialImg}
+                    loading="lazy"
                     alt="A men in a coffee using his phone and laptop"
                 />
             </div>

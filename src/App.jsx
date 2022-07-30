@@ -7,6 +7,7 @@ import CTA from "./sections/CTA";
 import Graduated from "./sections/Graduated";
 import Testimonial from "./sections/Testimonial";
 import Footer from "./sections/Footer";
+import Course from "./sections/Course";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Hero />
                 <Partners />
                 <About />
+                <Course />
             </Container>
             <CTA />
             <Container>

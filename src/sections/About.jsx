@@ -9,6 +9,7 @@ export default function About() {
                 <img
                     className="w-full"
                     src={aboutImg}
+                    loading="lazy"
                     alt="For humans inside of an office one of them using Computer and the rest of them laughing"
                 />
                 <h4 className="text-white absolute left-4 lg:left-8 bottom-10 lg:bottom-14">
